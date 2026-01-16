@@ -39,7 +39,7 @@ public class MainDemo {
                     if (nuevo.exists()) {
                         ejecutarGrafo(RUTA + GRAFO_NUEVO, true, sc);
                     } else {
-                        System.out.println("❌ No existe un nuevo grafo por leer.");
+                        System.out.println(" No existe un nuevo grafo por leer.");
                         System.out.println("   (Archivo esperado: " + GRAFO_NUEVO + ")");
                     }
                     break;
@@ -57,7 +57,7 @@ public class MainDemo {
         sc.close();
     }
 
-    // ===================== EJECUCIÓN GENERAL =====================
+    // EJECUCIÓN GENERAL
     private static void ejecutarGrafo(String rutaArchivo, boolean dirigido, Scanner sc) {
 
         try {
@@ -71,7 +71,7 @@ public class MainDemo {
             int origen = sc.nextInt();
 
             if (origen < 1 || origen > n) {
-                System.out.println("❌ Vértice inválido.");
+                System.out.println(" Vértice inválido.");
                 return;
             }
 
@@ -89,11 +89,11 @@ public class MainDemo {
             printOrder(dfsOrder);
 
         } catch (FileNotFoundException e) {
-            System.out.println("❌ Error al leer el archivo.");
+            System.out.println(" Error al leer el archivo.");
         }
     }
 
-    // ===================== IMPRESIÓN 1..n =====================
+    // IMPRESIÓN 1..n
     private static void printOrder(List<Integer> order) {
         System.out.print("[");
         for (int i = 0; i < order.size(); i++) {
